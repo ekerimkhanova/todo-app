@@ -1,0 +1,9 @@
+.select {
+    width: 90vw;
+    margin: 5vh auto;
+    border-radius: 12px;
+    padding: 5px 0 5px 10px;
+    background-color: var(--button-grey);
+    color: var(--purple);
+    outline: none;
+}

@@ -1,0 +1,9 @@
+.title{
+    color: var(--text-grey);
+    text-align: center;
+    font-size: calc(20px + 0.313vw);
+    line-height: calc(10px + 0.365vw);
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 300;
+    margin-bottom: 5vh;
+}

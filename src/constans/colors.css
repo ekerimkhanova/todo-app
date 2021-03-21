@@ -1,0 +1,18 @@
+:root {
+    --input-background: #f0f0f0;
+    --input-color: #5d7488;
+    --white: #ffffff;
+    --black: #000000;
+    --error: #ff5659;
+    --border-color: #d9d9d9;
+    --grey: #747474;
+    --text-blue: #7695b0;
+    --text-grey: #303030;
+    --button-grey: #f3f0f1;
+    --border: #020202;
+    --button-text: #6f6cde;
+    --ligth-purple: #E2E1F8;
+    --purple: #6f6cde;
+    --green: #79e3b6;
+  }
+  

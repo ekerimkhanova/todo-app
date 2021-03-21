@@ -1,0 +1,26 @@
+.button {
+    font-size: calc(11px + 0.313vw);
+    line-height: calc(10px + 0.365vw);
+    color: var(--purple);
+    font-family: 'Alegreya Sans', sans-serif;
+    width: calc(50px + 3.854vw);
+    height: calc(30px + 1.406vw);
+    background-color: var(--button-grey);
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    margin: 0 10px;
+}
+
+.button:hover {
+    opacity: 1;
+    box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.1), inset 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 600px) {
+    .button {
+        width: calc(80px + 3.854vw);
+        font-size: calc(16px + 0.313vw);
+    }
+}  

@@ -1,0 +1,126 @@
+.itemTextarea {
+    border-right: 0;
+    border-radius: 12px 0 0 12px;
+    display: flex;
+    align-items: center;
+    max-width: 85%;
+    min-width: 50px;
+    height: 100%;
+}
+
+.optionsContainer {
+    border: 1px solid var(--button-text);
+    box-sizing: border-box;
+    border-radius: 0 12px 12px 0;
+    border-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(11px + 0.313vw);
+    line-height: calc(10px + 0.365vw);
+    color: var(--text-grey);
+    padding-left: 5px;
+    flex-grow: 1;
+    padding-right: 5px;
+    background-color: var(--white);
+}
+
+.form {
+    display: flex;
+    padding-bottom: 10px;
+    box-shadow: -6px -6px 10px rgb(0 0 0 / 20%), 6px 6px 10px rgb(0 0 0 / 20%);
+    border-radius: 12px;
+}
+
+ul {
+    display: inline;
+    position: relative;
+}
+  
+li {
+    list-style: none;
+    border-bottom: 1px solid var(--button-grey);
+    padding: 5px 10px;
+    font-size: calc(11px + 0.313vw);
+    line-height: calc(10px + 0.365vw);
+    color: var(--text-grey);
+    font-family: 'Alegreya Sans', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+li svg {
+    padding-right: 2px;
+}
+
+li:hover {
+    color: var(--purple);
+}
+
+li:last-child {
+    border-bottom: none;
+}
+  
+ul:hover {
+    cursor: pointer;
+}
+
+ul.active {
+    color: var(--purple);
+}
+
+ul.active div {
+    display: initial;
+    position: absolute;
+    background: var(--ligth-purple);
+    z-index: 999;
+    width: max-content;
+    border-radius: 6px;
+    bottom: 0;
+    /* box-shadow: -6px -6px 10px rgb(0 0 0 / 20%), 6px 6px 10px rgb(0 0 0 / 20%);
+
+    box-shadow: 18px 18px 18px -5px rgba(34, 60, 80, 0.6); */
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+
+ul:not(.active) div {
+    display: none;
+}
+
+.buttonClose {
+    font-size: calc(10px + 0.313vw);
+    background: transparent;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.buttonClose:hover {
+    color: var(--error);
+}
+
+.buttonSubmit {
+    background: var(--white);
+    border: 1px solid var(--button-text);
+    color: var(--green);
+    cursor: pointer;
+    padding: 5px;
+    /* border-left: 0; */
+    border-right: 0;
+}
+
+.buttonSubmit svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .buttonSubmit svg {
+        width: 15px;
+        height: 15px;
+    }
+    li {
+        font-size: calc(14px + 0.313vw);
+        padding: 5px;
+    }
+}  
