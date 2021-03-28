@@ -1,8 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
 import ButtonContainer from '../../common/Button/functional/ButtonContainer';
-import { VscAdd } from 'react-icons/vsc';
-import { VscChromeClose } from 'react-icons/vsc';
 import TextAreaContainer from '../../common/TextArea/functional/TextAreaContainer';
 import { TitleConatiner } from '../../common/Title/functional/TitleConatiner';
 

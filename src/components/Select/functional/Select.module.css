@@ -1,9 +1,29 @@
 .select {
-    width: 90vw;
-    margin: 5vh auto;
-    border-radius: 12px;
-    padding: 5px 0 5px 10px;
-    background-color: var(--button-grey);
     color: var(--purple);
     outline: none;
+    margin: 5vh auto;
+    width: 65vw;
+    text-indent: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+    height: 35px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-color: var(--border-color);
+    background: url(../../../icons/arrow.svg) 96% / 6% no-repeat var(--button-grey);
+}
+
+select::-ms-expand {
+    display: none;
+    /* remove default arrow in IE 10 and 11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+
+@media screen and (min-width:0\0) {
+    select {
+        background: none\9;
+        padding: 5px\9;
+    }
 }

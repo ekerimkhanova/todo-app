@@ -8,7 +8,7 @@ const SelectContainer = () => {
   let history = useHistory();
 
   function handleChangeValue(e) {
-    history.push(`${e.target.value}`);
+    history.push(e.target.value);
   }
 
   return <SelectUI classes={styles} handleChangeValue={handleChangeValue} />

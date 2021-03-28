@@ -1,5 +1,5 @@
 export const routes = {
-    todo: '/',
+    todo: '/todo-app',
     inProcess: '/inProcess',
     done: '/done',
   };

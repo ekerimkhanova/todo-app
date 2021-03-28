@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import SelectContainer from '../../Select/functional/SelectContainer';
 import { routes } from '../../../constans/routes';
 import { TitleConatiner } from '../../common/Title/functional/TitleConatiner';
@@ -12,11 +12,12 @@ const AppUI = ({ handleOpenModal, mobileScreen }) => {
 
   return (
     <>
-      <ButtonContainer text='+ Task' onClick={handleOpenModal} className='buttonFixed' />
+      <ButtonContainer text='+ Task' onClick={handleOpenModal} className='button-fixed' />
       <h1 className='main-title'>TODO APP</h1>
       { mobileScreen ? (
         <>
           <SelectContainer />
+          <Redirect to={routes.todo} component={ToDoContainer} />
           <Switch>
             <Route exact path={routes.todo} component={ToDoContainer} />
             <Route exact path={routes.inProcess} component={InProcessContainer} />
