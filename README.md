@@ -1,3 +1,7 @@
+# Todo app is made to create and execute tasks: https://ekerimkhanova.github.io/todo-app/
+### Technology stack: React, Redux, CSS Modules
+### Libraries: "react-redux", "react-modal", "react-icons"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
