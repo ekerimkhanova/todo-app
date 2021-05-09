@@ -43,8 +43,7 @@ const ToDoContainer = () => {
                            done= {el.done} 
                            key= {el.id} />)     
         ), [todosList, todoOptions]);
-    
-    return <ToDoUI todos= {todos}/>
+        return <ToDoUI todos= {todos}/>
 }
 
 export default ToDoContainer
