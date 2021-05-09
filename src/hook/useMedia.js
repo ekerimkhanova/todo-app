@@ -1,10 +1,10 @@
 import {useCallback, useEffect, useState} from "react";
 
 export const useMedia = (match) => {
-  const [matched, setMatched] = useState(false);
+  const [matchedMedia, setMatchedMedia] = useState(false);
 
   const handleChange = useCallback(e => {
-    setMatched(e.matches);
+    setMatchedMedia(e.matches);
   }, []);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export const useMedia = (match) => {
     if (window.matchMedia) {
       matched = window.matchMedia(match)
       if (matched) {
-        setMatched(matched.matches);
+        setMatchedMedia(matched.matches);
         if(matched.addEventListener) {
           matched.addEventListener('change', handleChange)
         }
@@ -23,6 +23,10 @@ export const useMedia = (match) => {
         }
       }
     }
+    else {
+      setMatchedMedia(false);
+    }
   }, [handleChange, match]);
-  return matched;
+  
+  return matchedMedia;
 }

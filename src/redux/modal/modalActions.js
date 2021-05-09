@@ -1,5 +1,5 @@
 import {modalConstants} from "./modalConstans";
 
-export const openModal = () => ({ type: modalConstants.OPEN_MODAL });
+export const openModalAction = () => ({ type: modalConstants.OPEN_MODAL });
 
-export const closeModal = () => ({ type: modalConstants.CLOSE_MODAL });
+export const closeModalAction = () => ({ type: modalConstants.CLOSE_MODAL });

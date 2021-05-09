@@ -2,7 +2,7 @@ import React, { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import ToDoUI from '../ui/ToDoUI';
 import {getTodosListSelector} from '../../../redux/todosList/todosSelectors';
-import { changeItemStatusInProcess, changeItemStatusDone } from '../../../redux/todosList/todosActions';
+import { changeItemStatusInProcessAction, changeItemStatusDoneAction } from '../../../redux/todosList/todosActions';
 import { ItemContainer } from '../../Item/functional/ItemContainer';
 
 const ToDoContainer = () => {
@@ -12,13 +12,13 @@ const ToDoContainer = () => {
     const dispatch = useDispatch();
 
     const handleChangeItemStatusInProcess = useCallback( id => {
-        dispatch(changeItemStatusInProcess(id));
+        dispatch(changeItemStatusInProcessAction(id));
     },
     [dispatch]
     );
 
     const handleChangeItemStatusDone = useCallback( id => {
-        dispatch(changeItemStatusDone(id));
+        dispatch(changeItemStatusDoneAction(id));
     },
     [dispatch]
     );

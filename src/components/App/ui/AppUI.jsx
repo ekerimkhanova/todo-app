@@ -1,6 +1,5 @@
-import { Redirect, Route, Switch } from 'react-router-dom';
+import React from 'react';
 import SelectContainer from '../../Select/functional/SelectContainer';
-import { routes } from '../../../constans/routes';
 import { TitleConatiner } from '../../common/Title/functional/TitleConatiner';
 import ToDoContainer from '../../ToDo/functional/ToDoContainer';
 import InProcessContainer from '../../InProcess/functional/InProcessContainer';
@@ -8,8 +7,7 @@ import DoneContainer from '../../Done/functional/DoneContainer';
 import ModalContainer from '../../Modal/functional/ModalContainer';
 import ButtonContainer from '../../common/Button/functional/ButtonContainer';
 
-const AppUI = ({ handleOpenModal, mobileScreen }) => {
-
+const AppUI = ({ handleOpenModal, mobileScreen, ShowContent }) => {
   return (
     <>
       <ButtonContainer text='+ Task' onClick={handleOpenModal} className='button-fixed' />
@@ -17,12 +15,7 @@ const AppUI = ({ handleOpenModal, mobileScreen }) => {
       { mobileScreen ? (
         <>
           <SelectContainer />
-          <Redirect to={routes.todo} component={ToDoContainer} />
-          <Switch>
-            <Route exact path={routes.todo} component={ToDoContainer} />
-            <Route exact path={routes.inProcess} component={InProcessContainer} />
-            <Route exact path={routes.done} component={DoneContainer} />
-          </Switch>
+          {ShowContent && <ShowContent />}
         </>
         )
         :

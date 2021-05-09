@@ -2,8 +2,8 @@ import React, { useCallback, useState } from 'react'
 import ModalUI from '../ui/ModalUI'
 import {useDispatch, useSelector} from "react-redux";
 import {getModalSelector} from '../../../redux/modal/modalSelectors';
-import {closeModal} from '../../../redux/modal/modalActions';
-import { addNewItem } from '../../../redux/todosList/todosActions';
+import {closeModalAction} from '../../../redux/modal/modalActions';
+import { addNewItemAction } from '../../../redux/todosList/todosActions';
 import { getIdSelector } from '../../../redux/todosList/todosSelectors';
 import styles from "./Modal.module.css";
 
@@ -18,7 +18,7 @@ let currentId = ++id;
 const dispatch = useDispatch();
 
 const handleCloseModal = useCallback(() => {
-    dispatch(closeModal());
+    dispatch(closeModalAction());
     setValue('');
     setError(false);
   }, [dispatch]);
@@ -34,10 +34,10 @@ const  handleAddToDo = useCallback((e)=>{
       setError(true);
   }
   else {
-      dispatch(addNewItem(currentId, value));
+      dispatch(addNewItemAction(currentId, value));
       setValue('');
       setError(false);
-      dispatch(closeModal());
+      dispatch(closeModalAction());
   }
 }, [dispatch, value, currentId]) 
 

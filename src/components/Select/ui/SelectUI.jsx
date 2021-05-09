@@ -1,12 +1,12 @@
 import React from 'react';
-import { routes } from '../../../constans/routes';
+import { selectConstans } from '../../../redux/select/selectConstans';
 
-const SelectUI = ({ handleChangeValue, classes }) => {
+const SelectUI = ({ handleChangeValue, classes, value }) => {
   return (
-    <select onChange={handleChangeValue} className={classes['select']}>
-      <option value={routes.todo}>TODO</option>
-      <option value={routes.inProcess}>IN PROCESS</option>
-      <option value={routes.done}>DONE</option>
+    <select onChange={handleChangeValue} className={classes['select']} value={value}>
+      <option value={selectConstans.SHOW_TODO}>TODO</option>
+      <option value={selectConstans.SHOW_IN_PROCESS}>IN PROCESS</option>
+      <option value={selectConstans.SHOW_DONE}>DONE</option>
     </select>
   )
 }
